@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get("/", (req, res) => {
+    console.log("API is triggering");
     res.send("API is working");
 });
 
