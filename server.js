@@ -3,10 +3,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+
 const controller = require('./modules');
 const app = express();
+// const port = 3000;
 
-mongoose.connect(process.env.MONGO_DB, {
+mongoose.connect('mongodb+srv://aiexpo:aiexpo1991@cluster0.0xizd.mongodb.net/aiexpo?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -21,6 +23,8 @@ app.use(express.json());
 
 app.use(controller);
 
-app.listen(process.env.PORT, () => {
-    console.log("Server is running in ", process.env.PORT);
-});
+// app.listen(port, () => {
+//     console.log("Server is running in ", port);
+// });
+
+module.exports = app;
