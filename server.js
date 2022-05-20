@@ -8,7 +8,7 @@ const controller = require('./modules');
 const app = express();
 // const port = process.env.PORT;
 
-mongoose.connect('mongodb+srv://aiexpo:aiexpo1991@cluster0.0xizd.mongodb.net/aiexpo?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
