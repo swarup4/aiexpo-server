@@ -38,7 +38,8 @@ router.post("/login", (req, res) => {
                 res.json({
                     id: data._id,
                     email: data.email,
-                    name: data.name
+                    name: data.name,
+                    isAdmin: data.isAdmin
                     // token: token
                 });
             }
