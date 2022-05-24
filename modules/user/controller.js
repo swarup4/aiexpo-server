@@ -35,15 +35,11 @@ router.post("/login", (req, res) => {
             if (data == null) {
                 res.status(401).json({ error: "Username & password is not Valid" });
             } else {
-                let obj = { id: data._id, email: data.email };
-                let token = jwt.sign(obj, process.env.SecrateKey, {
-                    expiresIn: 1800 // expires in 30 minuit
-                });
-
                 res.json({
                     id: data._id,
                     email: data.email,
-                    token: token
+                    name: data.name
+                    // token: token
                 });
             }
         }

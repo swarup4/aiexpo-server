@@ -5,15 +5,11 @@ const objectId = Schema.ObjectId;
 
 const user = {
     _id: { type: objectId, auto: true },
-    fname: String,
-    lname: String,
-    role: String,
-    username: String,
-    password: String,
+    name: String,
+    isAdmin: Boolean,
     email: String,
-    emailVerified: { type: Boolean, default: 0 },
-    createdAt: Date,
-    updatedAt: Date,
+    password: String,
+    gender: String,
     status: { type: Boolean, default: 1 }
 };
 const userSchema = new Schema(user, { versionKey: false, timestamps: true });
