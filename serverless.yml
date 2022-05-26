@@ -27,6 +27,9 @@ provider:
   stage: dev
   timeout: 15
   region: us-east-1
+  environment: 
+    SecrateKey: aiexpo
+    MONGO_DB: mongodb+srv://aiexpo:aiexpo1991@cluster0.0xizd.mongodb.net/aiexpo?retryWrites=true&w=majority
 
 # you can overwrite defaults here
 #  stage: dev
